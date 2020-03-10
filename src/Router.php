@@ -18,14 +18,14 @@ class Router
         return $this;
     }
 
-    public function run()
+    public function match()
     {
         $uri = $_SERVER['REQUEST_URI'] ?? '/';
         $path = parse_url($uri)['path'];
 
         foreach ($this->handlers as $url => $handler) {
             if ($url !== $path) continue;
-            return $handler();
+            return $handler;
         }
 
         throw new Exception('404 Not Found');

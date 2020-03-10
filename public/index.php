@@ -2,14 +2,22 @@
 
 session_start();
 
-require_once '../autoload.php';
+require_once __DIR__ . '/../autoload.php';
 
-$routes = require_once '../routes.php';
-$router = new Router();
-$router->registerAll($routes);
+$bindings = require_once __DIR__ . '/../bindings.php';
+$container = (new Container())->bindAll($bindings);
+
+$routes = require_once __DIR__ . '/../routes.php';
+$router = (new Router())->registerAll($routes);
 
 try {
-    echo $router->run();
+    $handler = $router->match();
+    if (is_array($handler)) {
+        $controller = $container->make($handler[0]);
+        $action = $handler[1];
+        $handler = fn() => $controller->$action();
+    }
+    echo $handler();
 } catch (\Throwable $exception) {
     echo $exception->getMessage();
 }
