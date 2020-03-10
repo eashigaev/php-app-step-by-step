@@ -1,10 +1,12 @@
 <?php
 
+use App\Controllers\PageController;
+use App\Repositories\PostRepository;
+
 require_once '../autoload.php';
 
-$postRepo = new PostRepository();
-
-$view = new View();
-echo $view->render('pages/index', [
-    'post' => $postRepo->getAll()[0]
-]);
+$ctrl = new PageController(
+    new View(),
+    new PostRepository()
+);
+echo $ctrl->index();

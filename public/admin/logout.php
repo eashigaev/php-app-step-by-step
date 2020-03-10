@@ -1,7 +1,8 @@
 <?php
 
-session_start();
-session_destroy();
+use App\Controllers\AuthController;
 
-header('Location: /admin');
-exit;
+require_once '../../autoload.php';
+
+$ctrl = new AuthController(new View());
+echo $ctrl->login();

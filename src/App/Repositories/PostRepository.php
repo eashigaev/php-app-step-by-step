@@ -1,8 +1,10 @@
 <?php
 
+namespace App\Repositories;
+
 class PostRepository
 {
-    protected $fileName = __DIR__ . '/../db/posts.json';
+    protected $fileName = __DIR__ . '/../../../db/posts.json';
 
     public function getAll()
     {

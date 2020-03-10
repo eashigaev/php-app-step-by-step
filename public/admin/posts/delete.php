@@ -1,12 +1,14 @@
 <?php
 
-require_once '../auth.php';
+use App\Controllers\Admin\PostController;
+use App\Repositories\PostRepository;
+
+session_start();
+
 require_once '../../../autoload.php';
 
-$index = $_GET['index'] ?? null;
-
-$postRepo = new PostRepository();
-$postRepo->delete($index);
-
-header('Location: /admin/posts');
-exit;
+$ctrl = new PostController(
+    new View(),
+    new PostRepository()
+);
+echo $ctrl->delete();

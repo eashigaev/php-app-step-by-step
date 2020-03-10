@@ -1,12 +1,14 @@
 <?php
 
-require_once '../auth.php';
+use App\Controllers\Admin\PostController;
+use App\Repositories\PostRepository;
+
+session_start();
+
 require_once '../../../autoload.php';
 
-$postRepo = new PostRepository();
-$posts = $postRepo->getAll();
-
-$view = new View();
-echo $view->render('admin/posts', [
-    'posts' => $posts
-]);
+$ctrl = new PostController(
+    new View(),
+    new PostRepository()
+);
+echo $ctrl->index();

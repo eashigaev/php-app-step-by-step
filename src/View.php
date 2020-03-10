@@ -17,7 +17,7 @@ class View
 
         ob_start();
 
-        require __DIR__ . '/' . $this->path . $template . $this->extension;
+        require __DIR__ . 'View.php/' . $this->path . $template . $this->extension;
 
         return ob_get_clean();
     }

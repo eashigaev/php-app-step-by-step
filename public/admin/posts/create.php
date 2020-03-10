@@ -1,14 +1,14 @@
 <?php
 
-require_once '../auth.php';
+use App\Controllers\Admin\PostController;
+use App\Repositories\PostRepository;
+
+session_start();
+
 require_once '../../../autoload.php';
 
-$postRepo = new PostRepository();
-$postRepo->create([
-    'id' => uniqid(),
-    'title' => $_POST['title'] ?? '',
-    'text' => $_POST['text'] ?? '',
-]);
-
-header('Location: /admin/posts');
-exit;
+$ctrl = new PostController(
+    new View(),
+    new PostRepository()
+);
+echo $ctrl->create();

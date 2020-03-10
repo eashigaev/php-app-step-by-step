@@ -1,6 +1,12 @@
 <?php
 
+use App\Controllers\PageController;
+use App\Repositories\PostRepository;
+
 require_once '../autoload.php';
 
-$view = new View();
-echo $view->render('pages/about');
+$ctrl = new PageController(
+    new View(),
+    new PostRepository()
+);
+echo $ctrl->about();
