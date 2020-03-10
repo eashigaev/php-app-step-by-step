@@ -1,9 +1,12 @@
 <?php
 
-require '../templates/header.php';
 require '../classes/PostRepository.php';
+require_once '../classes/View.php';
+$view = new View();
 
 ?>
+
+<?= $view->render('layout/header'); ?>
 
 <h1 class="title">Micro Blog</h1>
 <div><a href="/">Main</a></div>
@@ -29,4 +32,4 @@ if ($post) {
 }
 ?>
 
-<?php require '../templates/footer.php'; ?>
+<?= $view->render('layout/footer'); ?>

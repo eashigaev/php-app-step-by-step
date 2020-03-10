@@ -1,4 +1,12 @@
-<?php require '../templates/header.php'; ?>
+<?php
+
+require '../classes/PostRepository.php';
+require_once '../classes/View.php';
+$view = new View();
+
+?>
+
+<?= $view->render('layout/header'); ?>
 
 <h1>About</h1>
 
@@ -16,4 +24,4 @@
     Людей, ведущих блог, называют бло́герами. Совокупность всех блогов Сети принято называть блогосферой.
 </p>
 
-<?php require '../templates/footer.php'; ?>
+<?= $view->render('layout/header'); ?>

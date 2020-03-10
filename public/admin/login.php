@@ -2,6 +2,10 @@
 
 session_start();
 
+require '../../classes/PostRepository.php';
+require_once '../../classes/View.php';
+$view = new View();
+
 $config = require_once '../../config.php';
 
 if (isset($_POST)) {
@@ -14,20 +18,19 @@ if (isset($_POST)) {
     }
 }
 
-require_once '../../templates/header.php';
-
 ?>
 
-    <h1>Login</h1>
+<?= $view->render('layout/header'); ?>
 
-    <form action="login.php" method="post">
-        <input type="text" name="login" placeholder="Login" value="admin">
-        <br>
-        <input type="password" name="pass" placeholder="Pass" value="12345">
-        <br>
-        <input type="submit" value="Login">
-    </form>
 
-<?php
+<h1>Login</h1>
 
-require_once '../../templates/footer.php';
+<form action="login.php" method="post">
+    <input type="text" name="login" placeholder="Login" value="admin">
+    <br>
+    <input type="password" name="pass" placeholder="Pass" value="12345">
+    <br>
+    <input type="submit" value="Login">
+</form>
+
+<?= $view->render('layout/footer'); ?>

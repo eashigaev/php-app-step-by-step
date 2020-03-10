@@ -1,9 +1,12 @@
 <?php
 
 require_once '../classes/PostRepository.php';
-require '../templates/header.php';
+require_once '../classes/View.php';
+$view = new View();
 
 ?>
+
+<?= $view->render('layout/header'); ?>
 
 <h1>Welcome to my microblog</h1>
 <ul>
@@ -16,8 +19,10 @@ require '../templates/header.php';
     Мерхольц, который в шуточной форме использовал в своём блоге Peterme.com в апреле или мае 1999 года.
 </p>
 <p>
-    Эван Уильямс из Pyra Labs использовал «блог» как существительное и глагол (англ. «to blog», что означает «изменить
-    свой блог или отправить на свой блог»), что привело к созданию термина «блогер». В Pyra Labs был создан Blogger.com,
+    Эван Уильямс из Pyra Labs использовал «блог» как существительное и глагол (англ. «to blog», что означает
+    «изменить
+    свой блог или отправить на свой блог»), что привело к созданию термина «блогер». В Pyra Labs был создан
+    Blogger.com,
     что привело к популяризации блогерства.
 </p>
 
@@ -31,4 +36,4 @@ echo "<div>{$post['text']}</div>";
 
 ?>
 
-<?php require '../templates/footer.php'; ?>
+<?= $view->render('layout/footer'); ?>

@@ -1,10 +1,14 @@
 <?php
 
 require_once '../auth.php';
-require_once '../../../classes/PostRepository.php';
-require '../../../templates/header.php';
+
+require '../../../classes/PostRepository.php';
+require_once '../../../classes/View.php';
+$view = new View();
 
 ?>
+
+<?= $view->render('layout/header'); ?>
 
 <h1>Microblog Admin</h1>
 
@@ -34,4 +38,4 @@ foreach ($posts as $index => $post) {
 
 ?>
 
-<?php require '../../../templates/footer.php'; ?>
+<?= $view->render('layout/footer'); ?>
