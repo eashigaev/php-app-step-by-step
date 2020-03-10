@@ -4,10 +4,10 @@
 
 <div>
     <a href="/">Blog</a> |
-    <a href="/admin/logout.php">Logout</a>
+    <a href="/admin/logout">Logout</a>
 </div>
 
-<form action="/admin/posts/create.php" method="post">
+<form action="/admin/posts/create" method="post">
     <input type="text" name="title" placeholder="Title">
     <br>
     <input type="text" name="text" placeholder="Text">
@@ -18,7 +18,7 @@
 <?php foreach ($posts as $index => $post): ?>
     <h3><?= $post['title'] ?></h3>
     <div><?= $post['text'] ?></div>
-    <div><a href='/admin/posts/delete.php?index=<?= $index ?>'>Delete</a></div>
+    <div><a href='/admin/posts/delete?index=<?= $index ?>'>Delete</a></div>
 <?php endforeach; ?>
 
 <?= $this->render('layout/footer'); ?>

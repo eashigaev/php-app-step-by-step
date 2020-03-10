@@ -6,7 +6,7 @@
 <?php foreach ($posts as $post): ?>
     <h3><?= $post['title'] ?></h3>
     <div><?= $post['text'] ?></div>
-    <div><a href='/posts.php?id=<?= $post['id'] ?>'>Link</a></div>
+    <div><a href='/posts?id=<?= $post['id'] ?>'>Link</a></div>
 <?php endforeach; ?>
 
 <?= $this->render('layout/footer'); ?>

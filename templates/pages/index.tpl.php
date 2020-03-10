@@ -2,8 +2,8 @@
 
 <h1>Welcome to my microblog</h1>
 <ul>
-    <li><a href="/posts.php">Posts</a></li>
-    <li><a href="/about.php">About</a></li>
+    <li><a href="/posts">Posts</a></li>
+    <li><a href="/about">About</a></li>
 </ul>
 
 <p>

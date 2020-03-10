@@ -20,7 +20,7 @@ class AuthController
             $pass = $_POST['pass'] ?? null;
             if ($login === $config['user.login'] && md5($pass) === $config['user.pass']) {
                 $_SESSION['auth'] = true;
-                header('Location: /admin/');
+                header('Location: /admin');
                 exit;
             }
         }

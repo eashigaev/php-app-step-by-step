@@ -2,7 +2,7 @@
 
 namespace App\Controllers\Admin;
 
-class PageController
+class AdminPageController
 {
     public function index()
     {

@@ -2,7 +2,7 @@
 
 <h1>Login</h1>
 
-<form action="/admin/login.php" method="post">
+<form action="/admin/login" method="post">
     <input type="text" name="login" placeholder="Login" value="admin">
     <br>
     <input type="password" name="pass" placeholder="Pass" value="12345">

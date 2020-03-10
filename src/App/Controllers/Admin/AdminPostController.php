@@ -4,7 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Repositories\PostRepository;
 
-class PostController
+class AdminPostController
 {
     protected \View $view;
     protected PostRepository $postRepository;
@@ -22,7 +22,7 @@ class PostController
         $auth = $_SESSION['auth'] ?? false;
 
         if (!$auth) {
-            header('Location: /admin/login.php');
+            header('Location: /admin/login');
             exit;
         }
     }
