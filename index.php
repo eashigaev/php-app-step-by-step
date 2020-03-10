@@ -21,7 +21,6 @@ require './templates/header.php';
     что привело к популяризации блогерства.
 </p>
 
-
 <?php
 
 $postRepo = new PostRepository();
