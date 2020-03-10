@@ -34,4 +34,4 @@ foreach ($posts as $index => $post) {
 
 ?>
 
-<?php require '../templates/footer.php'; ?>
+<?php require '../../templates/footer.php'; ?>
