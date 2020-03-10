@@ -3,13 +3,14 @@
 namespace App\Controllers\Admin;
 
 use App\Repositories\PostRepository;
+use Vendor\View;
 
 class AdminPostController
 {
-    protected \Vendor\View $view;
+    protected View $view;
     protected PostRepository $postRepository;
 
-    public function __construct(\Vendor\View $view, PostRepository $postRepository)
+    public function __construct(View $view, PostRepository $postRepository)
     {
         $this->view = $view;
         $this->postRepository = $postRepository;

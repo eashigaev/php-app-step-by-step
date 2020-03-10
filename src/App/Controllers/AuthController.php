@@ -2,12 +2,15 @@
 
 namespace App\Controllers;
 
+use Vendor\Config;
+use Vendor\View;
+
 class AuthController
 {
-    protected \Vendor\View $view;
-    protected \Vendor\Config $config;
+    protected View $view;
+    protected Config $config;
 
-    public function __construct(\Vendor\View $view, \Vendor\Config $config)
+    public function __construct(View $view, Config $config)
     {
         $this->view = $view;
         $this->config = $config;
