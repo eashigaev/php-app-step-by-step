@@ -6,10 +6,10 @@ use App\Repositories\PostRepository;
 
 class AdminPostController
 {
-    protected \View $view;
+    protected \Vendor\View $view;
     protected PostRepository $postRepository;
 
-    public function __construct(\View $view, PostRepository $postRepository)
+    public function __construct(\Vendor\View $view, PostRepository $postRepository)
     {
         $this->view = $view;
         $this->postRepository = $postRepository;

@@ -1,5 +1,7 @@
 <?php
 
+namespace Vendor;
+
 class Container
 {
     protected $bindings = [];

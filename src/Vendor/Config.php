@@ -1,5 +1,7 @@
 <?php
 
+namespace Vendor;
+
 class Config
 {
     protected $items = [];

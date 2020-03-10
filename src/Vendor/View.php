@@ -1,5 +1,7 @@
 <?php
 
+namespace Vendor;
+
 class View
 {
     protected $path;

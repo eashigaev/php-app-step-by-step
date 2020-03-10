@@ -1,5 +1,7 @@
 <?php
 
+namespace Vendor;
+
 class Router
 {
     protected $handlers = [];
@@ -28,6 +30,6 @@ class Router
             return $handler;
         }
 
-        throw new Exception('404 Not Found');
+        throw new \Exception('404 Not Found');
     }
 }

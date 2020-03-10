@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 class AuthController
 {
-    protected \View $view;
-    protected \Config $config;
+    protected \Vendor\View $view;
+    protected \Vendor\Config $config;
 
-    public function __construct(\View $view, \Config $config)
+    public function __construct(\Vendor\View $view, \Vendor\Config $config)
     {
         $this->view = $view;
         $this->config = $config;
