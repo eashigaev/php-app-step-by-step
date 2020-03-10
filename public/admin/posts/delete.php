@@ -1,7 +1,7 @@
 <?php
 
 require_once '../auth.php';
-require_once '../../classes/PostRepository.php';
+require_once '../../../classes/PostRepository.php';
 
 $index = $_GET['index'] ?? null;
 
