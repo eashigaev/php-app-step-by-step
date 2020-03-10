@@ -2,34 +2,16 @@
 
 require '../classes/PostRepository.php';
 require_once '../classes/View.php';
-$view = new View();
-
-?>
-
-<?= $view->render('layout/header'); ?>
-
-<h1 class="title">Micro Blog</h1>
-<div><a href="/">Main</a></div>
-
-<?php
-
-$postRepo = new PostRepository();
-$posts = $postRepo->getAll();
 
 $id = $_GET['id'] ?? null;
+
+$postRepo = new PostRepository();
 $post = $postRepo->getById($id);
 
-if ($post) {
-    echo "<h3>{$post['title']}</h3>";
-    echo "<div>{$post['text']}</div>";
-    echo "<div><a href='/posts.php'>Back</a></div>";
-} else {
-    foreach ($posts as $post) {
-        echo "<h3>{$post['title']}</h3>";
-        echo "<div>{$post['text']}</div>";
-        echo "<div><a href='/posts.php?id={$post['id']}'>Link</a></div>";
-    }
-}
-?>
+$view = new View();
 
-<?= $view->render('layout/footer'); ?>
+echo $post
+    ? $view->render('pages/posts-full', $post)
+    : $view->render('pages/posts-all', [
+        'posts' => $posts = $postRepo->getAll()
+    ]);

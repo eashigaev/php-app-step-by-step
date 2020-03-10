@@ -5,14 +5,16 @@ class View
     protected $path;
     protected $extension;
 
-    public function __construct($path = '/../templates/', $extension = '.php')
+    public function __construct($path = '/../templates/', $extension = '.tpl.php')
     {
         $this->path = $path;
         $this->extension = $extension;
     }
 
-    public function render($template)
+    public function render($template, array $data = [])
     {
+        extract($data);
+
         ob_start();
 
         require __DIR__ . '/' . $this->path . $template . $this->extension;
