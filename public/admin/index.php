@@ -1,14 +1,10 @@
 <?php
 
-use App\Controllers\Admin\PostController;
-use App\Repositories\PostRepository;
+use App\Controllers\Admin\PageController;
 
 session_start();
 
 require_once '../../autoload.php';
 
-$ctrl = new PostController(
-    new View(),
-    new PostRepository()
-);
+$ctrl = new PageController();
 echo $ctrl->index();
