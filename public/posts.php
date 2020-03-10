@@ -1,7 +1,6 @@
 <?php
 
-require '../classes/PostRepository.php';
-require_once '../classes/View.php';
+require_once '../autoload.php';
 
 $id = $_GET['id'] ?? null;
 

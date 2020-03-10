@@ -1,7 +1,6 @@
 <?php
 
-require_once '../classes/PostRepository.php';
-require_once '../classes/View.php';
+require_once '../autoload.php';
 
 $postRepo = new PostRepository();
 

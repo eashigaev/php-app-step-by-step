@@ -2,9 +2,7 @@
 
 session_start();
 
-require '../../classes/PostRepository.php';
-require_once '../../classes/View.php';
-
+require_once '../../autoload.php';
 
 $config = require_once '../../config.php';
 

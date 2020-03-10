@@ -1,7 +1,6 @@
 <?php
 
-require '../classes/PostRepository.php';
-require_once '../classes/View.php';
+require_once '../autoload.php';
 
 $view = new View();
 echo $view->render('pages/about');
