@@ -1,7 +1,7 @@
 <?php
 
-require './templates/header.php';
-require './classes/PostRepository.php';
+require '../templates/header.php';
+require '../classes/PostRepository.php';
 
 ?>
 
@@ -29,4 +29,4 @@ if ($post) {
 }
 ?>
 
-<?php require './templates/footer.php'; ?>
+<?php require '../templates/footer.php'; ?>

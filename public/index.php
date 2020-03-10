@@ -1,7 +1,7 @@
 <?php
 
-require_once './classes/PostRepository.php';
-require './templates/header.php';
+require_once '../classes/PostRepository.php';
+require '../templates/header.php';
 
 ?>
 

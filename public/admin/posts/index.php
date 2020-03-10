@@ -1,15 +1,15 @@
 <?php
 
 require_once '../auth.php';
-require_once '../../classes/PostRepository.php';
-require '../../templates/header.php';
+require_once '../../../classes/PostRepository.php';
+require '../../../templates/header.php';
 
 ?>
 
 <h1>Microblog Admin</h1>
 
 <div>
-    <a href="..">Blog</a> |
+    <a href="/">Blog</a> |
     <a href="/admin/logout.php">Logout</a>
 </div>
 
@@ -34,4 +34,4 @@ foreach ($posts as $index => $post) {
 
 ?>
 
-<?php require '../templates/footer.php'; ?>
+<?php require '../../../templates/footer.php'; ?>

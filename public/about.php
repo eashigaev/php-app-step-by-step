@@ -1,4 +1,4 @@
-<?php require './templates/header.php'; ?>
+<?php require '../templates/header.php'; ?>
 
 <h1>About</h1>
 
@@ -16,4 +16,4 @@
     Людей, ведущих блог, называют бло́герами. Совокупность всех блогов Сети принято называть блогосферой.
 </p>
 
-<?php require './templates/footer.php'; ?>
+<?php require '../templates/footer.php'; ?>

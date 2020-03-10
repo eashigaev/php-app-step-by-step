@@ -2,7 +2,7 @@
 
 session_start();
 
-$config = require_once '../config.php';
+$config = require_once '../../config.php';
 
 if (isset($_POST)) {
     $login = $_POST['login'] ?? null;
@@ -14,7 +14,7 @@ if (isset($_POST)) {
     }
 }
 
-require_once '../templates/header.php';
+require_once '../../templates/header.php';
 
 ?>
 
@@ -30,4 +30,4 @@ require_once '../templates/header.php';
 
 <?php
 
-require_once '../templates/footer.php';
+require_once '../../templates/footer.php';
