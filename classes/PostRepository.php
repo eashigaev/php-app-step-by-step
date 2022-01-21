@@ -34,6 +34,6 @@ class PostRepository
 
     public function saveAll(array $posts)
     {
-        file_put_contents($this->fileName, json_encode($posts, JSON_UNESCAPED_UNICODE));
+        file_put_contents($this->fileName, json_encode($posts));
     }
 }
